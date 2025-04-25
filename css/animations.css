@@ -1,0 +1,505 @@
+/* ===== ANIMATIONS ===== */
+
+/* Loading Animation */
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* Grid Animation */
+@keyframes gridMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
+/* Glitch Text Animation */
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 rgba(255, 0, 170, 0.75), -0.05em -0.025em 0 rgba(0, 238, 255, 0.75);
+    }
+    14% {
+        text-shadow: 0.05em 0 0 rgba(255, 0, 170, 0.75), -0.05em -0.025em 0 rgba(0, 238, 255, 0.75);
+    }
+    15% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 170, 0.75), 0.025em 0.025em 0 rgba(0, 238, 255, 0.75);
+    }
+    49% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 170, 0.75), 0.025em 0.025em 0 rgba(0, 238, 255, 0.75);
+    }
+    50% {
+        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 170, 0.75), 0.05em 0 0 rgba(0, 238, 255, 0.75);
+    }
+    99% {
+        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 170, 0.75), 0.05em 0 0 rgba(0, 238, 255, 0.75);
+    }
+    100% {
+        text-shadow: -0.025em 0 0 rgba(255, 0, 170, 0.75), -0.025em -0.025em 0 rgba(0, 238, 255, 0.75);
+    }
+}
+
+/* Specialized text glitch effect for main headings */
+.glitch {
+    position: relative;
+    color: var(--color-accent-primary);
+    text-shadow: var(--shadow-neon);
+    animation: glitchText 3s infinite alternate-reverse;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip: rect(0, 0, 0, 0);
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--color-accent-secondary);
+    animation: glitchBefore 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: 2px 0 var(--color-accent-primary);
+    animation: glitchAfter 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitchText {
+    0%, 100% {
+        text-shadow: 0 0 10px var(--color-accent-primary), 0 0 20px var(--color-accent-primary), 0 0 30px var(--color-accent-primary);
+    }
+    33% {
+        text-shadow: 0 0 10px var(--color-accent-secondary), 0 0 20px var(--color-accent-secondary), 0 0 30px var(--color-accent-secondary);
+    }
+    66% {
+        text-shadow: 0 0 10px var(--color-accent-tertiary), 0 0 20px var(--color-accent-tertiary), 0 0 30px var(--color-accent-tertiary);
+    }
+}
+
+@keyframes glitchBefore {
+    0% {
+        clip: rect(44px, 9999px, 56px, 0);
+    }
+    5% {
+        clip: rect(20px, 9999px, 59px, 0);
+    }
+    10% {
+        clip: rect(67px, 9999px, 58px, 0);
+    }
+    15% {
+        clip: rect(79px, 9999px, 94px, 0);
+    }
+    20% {
+        clip: rect(35px, 9999px, 39px, 0);
+    }
+    25% {
+        clip: rect(82px, 9999px, 61px, 0);
+    }
+    30% {
+        clip: rect(33px, 9999px, 6px, 0);
+    }
+    35% {
+        clip: rect(6px, 9999px, 2px, 0);
+    }
+    40% {
+        clip: rect(40px, 9999px, 71px, 0);
+    }
+    45% {
+        clip: rect(70px, 9999px, 14px, 0);
+    }
+    50% {
+        clip: rect(35px, 9999px, 56px, 0);
+    }
+    55% {
+        clip: rect(10px, 9999px, 85px, 0);
+    }
+    60% {
+        clip: rect(60px, 9999px, 8px, 0);
+    }
+    65% {
+        clip: rect(93px, 9999px, 100px, 0);
+    }
+    70% {
+        clip: rect(72px, 9999px, 100px, 0);
+    }
+    75% {
+        clip: rect(17px, 9999px, 26px, 0);
+    }
+    80% {
+        clip: rect(59px, 9999px, 42px, 0);
+    }
+    85% {
+        clip: rect(64px, 9999px, 78px, 0);
+    }
+    90% {
+        clip: rect(95px, 9999px, 3px, 0);
+    }
+    95% {
+        clip: rect(1px, 9999px, 44px, 0);
+    }
+    100% {
+        clip: rect(26px, 9999px, 88px, 0);
+    }
+}
+
+@keyframes glitchAfter {
+    0% {
+        clip: rect(98px, 9999px, 24px, 0);
+    }
+    5% {
+        clip: rect(82px, 9999px, 71px, 0);
+    }
+    10% {
+        clip: rect(33px, 9999px, 23px, 0);
+    }
+    15% {
+        clip: rect(93px, 9999px, 35px, 0);
+    }
+    20% {
+        clip: rect(10px, 9999px, 28px, 0);
+    }
+    25% {
+        clip: rect(71px, 9999px, 28px, 0);
+    }
+    30% {
+        clip: rect(21px, 9999px, 92px, 0);
+    }
+    35% {
+        clip: rect(95px, 9999px, 68px, 0);
+    }
+    40% {
+        clip: rect(31px, 9999px, 62px, 0);
+    }
+    45% {
+        clip: rect(88px, 9999px, 88px, 0);
+    }
+    50% {
+        clip: rect(18px, 9999px, 2px, 0);
+    }
+    55% {
+        clip: rect(47px, 9999px, 48px, 0);
+    }
+    60% {
+        clip: rect(30px, 9999px, 17px, 0);
+    }
+    65% {
+        clip: rect(94px, 9999px, 92px, 0);
+    }
+    70% {
+        clip: rect(60px, 9999px, 62px, 0);
+    }
+    75% {
+        clip: rect(44px, 9999px, 39px, 0);
+    }
+    80% {
+        clip: rect(70px, 9999px, 64px, 0);
+    }
+    85% {
+        clip: rect(96px, 9999px, 81px, 0);
+    }
+    90% {
+        clip: rect(36px, 9999px, 22px, 0);
+    }
+    95% {
+        clip: rect(91px, 9999px, 24px, 0);
+    }
+    100% {
+        clip: rect(87px, 9999px, 46px, 0);
+    }
+}
+
+/* Hologram Effect */
+@keyframes hologramEffect {
+    0% {
+        opacity: 0.4;
+        background-position: 0% 0%;
+    }
+    25% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.5;
+        background-position: 100% 100%;
+    }
+    75% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0.4;
+        background-position: 0% 0%;
+    }
+}
+
+/* Pulse Animation for visual elements */
+@keyframes pulseEffect {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+/* Heartbeat Animation for heart product */
+@keyframes pulseHeartbeat {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+    25% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+    30% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+    55% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    75% {
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+}
+
+/* Glowing Pulse for about section */
+@keyframes pulseGlow {
+    0% {
+        opacity: 0.4;
+        filter: blur(5px);
+    }
+    50% {
+        opacity: 0.7;
+        filter: blur(8px);
+    }
+    100% {
+        opacity: 0.4;
+        filter: blur(5px);
+    }
+}
+
+/* Smooth hover transitions for interactive elements */
+.product-card, .feature, .cta-button, .product-button, .submit-button, .social-link, .nav-link {
+    will-change: transform, box-shadow;
+}
+
+/* Float animation for certain elements */
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Scanline effect for cyber aesthetic */
+@keyframes scanline {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Flicker animation for neon elements */
+@keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        opacity: 0.99;
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.4;
+    }
+}
+
+/* Add a flicker effect to the section titles */
+.section-title {
+    animation: flicker 15s infinite;
+}
+
+/* Add subtle float animation to the logo text */
+.logo-text {
+    animation: floatAnimation 4s ease-in-out infinite;
+}
+
+/* Ripple effect for button clicks */
+.cta-button::after, .product-button::after, .submit-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%, -50%);
+    transform-origin: 50% 50%;
+}
+
+.cta-button:focus:not(:active)::after, 
+.product-button:focus:not(:active)::after, 
+.submit-button:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        opacity: 1;
+        transform: scale(0, 0) translate(-50%, -50%);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(20, 20) translate(-50%, -50%);
+    }
+}
+
+/* Cyberpunk scanner line effect */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 238, 255, 0.3);
+    animation: scanline 8s linear infinite;
+    z-index: 2;
+}
+
+/* Glitch effect for images on hover */
+.product-image:hover .product-holo {
+    animation: glitchImage 0.5s linear infinite;
+}
+
+@keyframes glitchImage {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* Add subtle rotate animation to make elements feel more alive */
+@keyframes subtleRotate {
+    0% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+/* Fade-in animation for page elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade-in animation to various sections */
+.hero-content {
+    animation: fadeIn 1s ease-out 3s forwards;
+    opacity: 0;
+}
+
+.products-grid {
+    animation: fadeIn 1s ease-out 0.2s forwards;
+}
+
+.about-content {
+    animation: fadeIn 1s ease-out 0.2s forwards;
+}
+
+.contact-content {
+    animation: fadeIn 1s ease-out 0.2s forwards;
+}
+
+/* Cool typing effect for headings when they enter viewport */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Shake animation for call-to-action buttons */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20%, 60% {
+        transform: translateX(-2px);
+    }
+    40%, 80% {
+        transform: translateX(2px);
+    }
+}
+
+.cta-button:hover, .product-button:hover, .submit-button:hover {
+    animation: shake 0.5s ease-in-out;
+}
