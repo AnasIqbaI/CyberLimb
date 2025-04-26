@@ -1167,7 +1167,6 @@ input:focus + .input-line, select:focus + .input-line, textarea:focus + .input-l
     background: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
   }
-  
 
   .content-overlay {
     position: absolute;
@@ -1175,39 +1174,6 @@ input:focus + .input-line, select:focus + .input-line, textarea:focus + .input-l
     left: 350px;
   }
 
-  /* Sponsor Box */
-.sponsor-box {
-    position: absolute;
-    top: 100px;
-    left: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border: 2px solid #0ff;
-    padding: 15px 20px;
-    border-radius: 15px;
-    backdrop-filter: blur(5px);
-    z-index: 1;
-    width: 150px;
-  }
-  
-  .sponsor-box h3 {
-    color: #ff00ff;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  .sponsor-logos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .sponsor-logos img {
-    width: 80px;
-    height: auto;
-    filter: brightness(1.2) drop-shadow(0 0 5px #0ff);
-  }
   
 
 
