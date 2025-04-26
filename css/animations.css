@@ -523,3 +523,15 @@
 .cta-button:hover, .product-button:hover, .submit-button:hover {
     animation: shake 0.5s ease-in-out;
 }
+
+
+@keyframes glowBorder {
+    0% { box-shadow: 0 0 10px #00f7ff6e; }
+    50% { box-shadow: 0 0 25px #00f7ff5e, 0 0 40px rgba(0, 246, 255, 0.5); }
+    100% { box-shadow: 0 0 10px #00f7ff70; }
+  }
+  
+  .site-wrapper {
+    /* ...existing styles... */
+    animation: glowBorder 3s ease-in-out infinite;
+  }
