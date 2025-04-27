@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -43,9 +45,10 @@
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1 class="glitch" data-text="UPGRADE HUMANITY"><strong>UPGRADE HUMANITY</strong></h1>
-                <p class="hero-description">The future of human evolution is here. Premium cyborg augmentations to enhance your capabilities beyond natural limits.</p>
-                <a href="#products" class="cta-button">EXPLORE AUGMENTS</a>
+                <h1 id="typed-text" class="glitch"></h1>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="300">The future of human evolution is here. Premium cyborg augmentations to enhance your capabilities beyond natural limits.</p>
+                <a href="#products" class="cta-button" data-aos="fade-up" data-aos-delay="500">EXPLORE AUGMENTS</a>
+
             </div>
             <div class="cyborg-container">
                 <img src="cyborg.svg" alt="Cyborg Silhouette" class="cyborg-image">
@@ -376,12 +379,32 @@
             <p>DEVELOPED & DESIGNED BY ANAS IQBAL</p>
         </div>
     </footer>
-
-    
-      
-      
-
-      
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+  var typed = new Typed('#typed-text', {
+    strings: ["UPGRADE <br> HUMANITY", "ENHANCE <br> YOURSELF", "REWRITE <br> YOUR <br> LIMITS"],
+    typeSpeed: 150,
+    backSpeed: 70,
+    loop: true,
+    onStringTyped: function(pos, self) {
+      // Update the glitch copies
+      document.getElementById('typed-text').setAttribute('data-text', self.strings[pos]);
+    },
+    onComplete: function(self) {
+      document.getElementById('typed-text').setAttribute('data-text', self.strings[self.arrayPos]);
+    }
+  });
+</script>
+
+      
+      
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>

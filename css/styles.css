@@ -270,7 +270,7 @@ p {
 .cyborg-container {
     position: absolute;
     bottom: 0;
-    right: 10%;
+    right: 5%;
     height: 80%;
     z-index: 2;
     animation: floatAnimation 6s ease-in-out infinite;
@@ -1110,6 +1110,36 @@ body::-webkit-scrollbar {
   }
   
 
+  .glitch {
+    position: relative;
+    color: #00ffff;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: glitch 1s infinite;
+  }
+  
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    color: #ff00ff;
+    clip: rect(0, 100px, 0, 0);
+  }
+  
+  .glitch::before {
+    animation: glitchTop 3s infinite linear alternate-reverse;
+  }
+  
+  .glitch::after {
+    animation: glitchBottom 3s infinite linear alternate-reverse;
+  }
+  
+  
   
 
 
