@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER-X AUGMENTATIONS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <a href="#home" class="logo-text">CYBER-X</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="Product.html" class="nav-link">AUGMENTS</a>
+                <a href="Aboutus.html" class="nav-link">ABOUT</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </div>
+        </div>
+    </nav> 
+
+    <!-- Hero Section -->
+    <div class="about-box">
+        <div class="about-image">
+          <img src="Images/aboutbg.jpg" alt="Team Working" />
+        </div> 
+    </div>
+    
+    <section id="about" class="about">
+        <div class="section-header dark">
+            <h2 class="section-title">ABOUT US</h2>
+            <div class="section-line"></div>
+            <p class="section-subtitle">THE CYBER-X PHILOSOPHY</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-image">
+                <div class="about-holo"><img src="About Us/AnasIqbal.jpg" alt=""></div>
+            </div>
+            <div class="about-text">
+                <h3 class="about-title">EVOLVE BEYOND LIMITS</h3>
+                <p>Since 2025, CYBER-X has been at the forefront of human enhancement technology. We believe that cybernetic evolution is the next step in human advancement.</p>
+                <p>Our augmentations are designed with precision, utilizing cutting-edge technology to seamlessly integrate with human physiology. Every component is crafted with the highest standards of biocompatibility and performance.</p>
+                <p>We're not just selling products; we're offering a future where human potential is unlimited. Join us in transcending biological constraints and embracing a new era of human capability.</p>
+                
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="feature-text">
+                            <h4>LIFETIME WARRANTY</h4>
+                            <p>All augmentations come with our unmatched warranty</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-medkit"></i></div>
+                        <div class="feature-text">
+                            <h4>EXPERT INSTALLATION</h4>
+                            <p>Our certified surgeons ensure perfect integration</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                        <div class="feature-text">
+                            <h4>FREE UPGRADES</h4>
+                            <p>Stay cutting-edge with our upgrade program</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div class="cool-paragraph-box">
+            <center><h2 class="cyberpunk-title"><i class="fas fa-microchip"></i> OUR PHILOSOPHY</h2></center>
+            <p>
+              At Cyber-X, we believe the future of humanity lies beyond the boundaries of biology. Since our inception, we have been committed to pioneering technologies that push the limits of what the human body and mind can achieve. Our mission is to design augmentations that not only enhance physical capabilities but also empower individuals to unlock new levels of creativity, resilience, and connection. Every innovation we produce is born from a fusion of advanced engineering and ethical responsibility. We envision a world where human potential is no longer constrained by flesh alone, but elevated by seamless integration with technology. Join us as we redefine what it means to be human in the 21st century and beyond.
+            </p>
+          </div>
+        
+          <div class="image-gallery">
+            <img src="Images/1.jpg" alt="Cyber Eye">
+            <img src="Images/2.jpg" alt="Augmented Arm">
+            <img src="Images/3.jpg" alt="Futuristic City">
+          </div>
+    </section>
+      
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+            }
+          });
+        });
+      
+        const hiddenElements = document.querySelectorAll('.fade-in');
+        hiddenElements.forEach(el => observer.observe(el));
+      </script>
+      
+      <style>
+        .fade-in.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      </style>
+      
+
+
+      <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">CYBER-X</span>
+                <p class="footer-tagline">TRANSCEND HUMANITY</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>NAVIGATION</h4>
+                    <a href="#home">Home</a>
+                    <a href="#products">Augments</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>LEGAL</h4>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Warranty Information</a>
+                    <a href="#">Installation Agreement</a>
+                </div>
+                <div class="footer-col">
+                    <h4>SUPPORT</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Maintenance Guide</a>
+                    <a href="#">Troubleshooting</a>
+                    <a href="#">Contact Support</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CYBER-X CORPORATION. ALL RIGHTS RESERVED.</p>
+            <p>DISCLAIMER: AUGMENTATIONS MAY CAUSE TEMPORARY SYSTEM INSTABILITY.</p>
+            <p>DEVELOPED & DESIGNED BY ANAS IQBAL</p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
